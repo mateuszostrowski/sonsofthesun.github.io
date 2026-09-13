@@ -126,6 +126,7 @@
             font-size: 1.1rem;
             color: var(--text-muted);
             max-width: 1000px;
+            text-align: justify;
         }
 
         .about-content p {
@@ -133,30 +134,16 @@
         }
 
         /* MEMBERS SECTION */
-        .grid-members {
-            display: grid;
+        .members-content{
+            font-size: 1.1rem;
             color: var(--text-muted);
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 2rem;
-            padding: 1rem 6rem 0 6rem;
+            max-width: 1000px;
+            padding-top: 2rem;
+            text-align: center;
         }
 
-        .member-card {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
-            border: 1px solid #222;
-        }
-
-        .member-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .member-card span {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .dots{
+            font-size: 0.5rem;
         }
 
         /* ALBUMS SECTION */
