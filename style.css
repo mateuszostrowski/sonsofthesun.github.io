@@ -103,6 +103,16 @@
             background-color: var(--accent);
         }
 
+        .photo {
+            max-width: 800px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* PHOTO ONE SECTION */
         .photo-one-content {
             font-size: 1.1rem;
@@ -125,8 +135,10 @@
         /* MEMBERS SECTION */
         .grid-members {
             display: grid;
+            color: var(--text-muted);
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 2rem;
+            padding: 1rem 6rem 0 6rem;
         }
 
         .member-card {
