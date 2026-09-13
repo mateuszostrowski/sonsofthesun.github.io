@@ -1,0 +1,274 @@
+ /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #1c1c19;
+            --card-bg: #171717;
+            --text-main: #f5f5f5;
+            --text-muted: #888888;
+            --accent: #e63946;
+            --orange: #f04b14;
+            --font-main: "Special Elite", system-ui;
+            --font-weight: 400;
+            --font-style: normal;
+            --max-width: 1000px;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            font-weight: var(--font-weight);
+            font-style: var(--font-style);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid #222;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+           
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 1rem 1.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        /* PHOTO ONE SECTION */
+        .photo-one-content {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 1000px;
+            padding: 6rem 1.5rem 0 1.5rem;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 1000px;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* MEMBERS SECTION */
+        .grid-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border: 1px solid #222;
+        }
+
+        .member-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .member-card span {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ALBUMS SECTION */
+        .grid-albums {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .album-card {
+            background-color: var(--card-bg);
+            border: 1px solid #222;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .album-cover-placeholder {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #444;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .album-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .album-year {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .album-link {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid #222;
+            color: var(--text-main);
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background-color: var(--text-main);
+            color: var(--bg-color);
+            border: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--accent);
+            color: var(--text-main);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-top: 1px solid #222;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
