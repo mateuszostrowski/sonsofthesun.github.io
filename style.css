@@ -175,6 +175,13 @@
             letter-spacing: 2px;
         }
 
+        .album-cover-placeholder > img {
+        width: auto;
+        height : auto;
+        max-height: 100%;
+        max-width: 100%;
+        }
+
         .album-title {
             font-size: 1.3rem;
             margin-bottom: 0.25rem;
